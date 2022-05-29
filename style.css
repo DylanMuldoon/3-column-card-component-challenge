@@ -8,11 +8,10 @@
   box-sizing: border-box;
 }
 
-/* *:focus {
-  outline: none;
-  outline: 4px dotted #000;
+*:focus {
+  outline: 4px dashed hsl(0, 0%, 95%);
   outline-offset: 4px;
-} */
+}
 
 :root {
   --sedan-bg-color: hsl(31, 77%, 52%);
@@ -29,8 +28,7 @@ body {
   font-weight: 400;
   font-size: 1.5rem;
   color: hsla(0, 0%, 100%, 0.75);
-  /* background-color: hsl(0, 0%, 95%); */
-  background-color: #000;
+  background-color: hsl(0, 0%, 95%);
 }
 
 main {
@@ -43,3 +41,146 @@ main {
 /* ******************************* */
 /* PREVIEW CARD */
 /* ******************************* */
+
+.container {
+  max-width: 92.5rem;
+  padding: 0 2.5rem;
+}
+
+article {
+  overflow: hidden;
+  border-radius: 9px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.car-card {
+  padding: 5rem 4rem 6rem 4rem;
+}
+
+.car-card__sedan {
+  background-color: var(--sedan-bg-color);
+}
+
+.car-card__suv {
+  background-color: var(--suv-bg-color);
+}
+
+.car-card__luxary {
+  background-color: var(--luxury-bg-color);
+}
+
+.icon {
+  margin-bottom: 2.5rem;
+}
+
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+  color: hsl(0, 0%, 95%);
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  margin-bottom: 2.5rem;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 8rem;
+}
+
+/* ******************************* */
+/* BUTTON */
+/* ******************************* */
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 30px;
+  padding: 1.2rem 3rem;
+  transition: all 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+  color: hsl(0, 0%, 95%);
+  box-shadow: inset 0 0 0 2px hsl(0, 0%, 95%);
+}
+
+.btn__sedan {
+  color: var(--sedan-bg-color);
+}
+
+.btn__suv {
+  color: var(--suv-bg-color);
+}
+
+.btn__luxary {
+  color: var(--luxury-bg-color);
+}
+
+.btn__sedan:hover,
+.btn__sedan:active {
+  background-color: var(--sedan-bg-color);
+}
+
+.btn__suv:hover,
+.btn__suv:active {
+  background-color: var(--suv-bg-color);
+}
+
+.btn__luxary:hover,
+.btn__luxary:active {
+  background-color: var(--luxury-bg-color);
+}
+
+/* ******************************* */
+/* MEDIA QUERIES - BELOW 880px */
+/* ******************************* */
+
+@media (max-width: 55em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* ******************************* */
+/* MEDIA QUERIES - BELOW 704px */
+/* ******************************* */
+
+@media (max-width: 44em) {
+  html {
+    font-size: 43.75%;
+  }
+}
+
+/* ******************************* */
+/* MEDIA QUERIES - BELOW 624px */
+/* ******************************* */
+
+@media (max-width: 39em) {
+  html {
+    font-size: 50%;
+  }
+
+  .container {
+    max-width: 37.5rem;
+  }
+
+  article {
+    grid-template-columns: 1fr;
+  }
+
+  .car-card {
+    padding: 4rem 5rem;
+  }
+
+  img {
+    width: 22.5%;
+  }
+
+  p {
+    margin-bottom: 2.5rem;
+  }
+}
